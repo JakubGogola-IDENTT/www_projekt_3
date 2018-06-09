@@ -25,7 +25,6 @@ class captcha_gen {
 
     public function generate() {
       $this->matrix = $this->generate_matrix();
-      print $this->det($this->matrix);
       return $this->det($this->matrix);
     }
 

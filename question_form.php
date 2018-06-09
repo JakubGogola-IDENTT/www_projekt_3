@@ -66,6 +66,7 @@ echo $page_gen->gen_begin();
                <?php
                $captcha_gen = new captcha_gen();
                $_SESSION['captcha_result'] = $captcha_gen->generate();
+               echo $captcha_gen->display();
                ?>
 
                <div class="form-row">
