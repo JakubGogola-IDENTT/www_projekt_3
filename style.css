@@ -344,3 +344,61 @@ a:hover {
 .book .col-2-6 {
     min-height: 20em;
 }
+
+/*Forms*/
+select, input {
+    height: 1.3em;
+    font-size: 1.2em;
+}
+
+textarea {
+    font-size: 1.1em;
+    resize: none;
+    max-width: 99%;
+}
+
+.form-row {
+    margin: 0.5em 0 0.5em 0;
+}
+
+.form-row:first-of-type {
+    margin-top: 2em;
+}
+
+.form-label {
+    font-size: 1.3em;
+    min-width: 50em;
+    margin-right: 1em;
+}
+
+/*Q&A*/
+.question {
+    color: white;
+    background-color: #7798AB;
+    opacity: 0.9;
+    width: 90%;
+    padding: 0.2em;
+    overflow: hidden;
+}
+
+.question h3, h4 {
+    margin: 0.2em;
+}
+
+.question p {
+    margin: 0.2em;
+}
+
+.answer {
+    width: 90%;
+    padding: 0.2em;
+    overflow: hidden;
+}
+
+.answer p {
+    margin: 0.2em;
+    font-size: 1.2em;
+}
+
+
+

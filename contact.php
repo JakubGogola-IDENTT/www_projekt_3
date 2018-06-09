@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/gen/page_gen.php");
+require_once(__DIR__ ."/gen/page_gen.php");
 
 
 $title = "Kontakt";
@@ -22,7 +22,7 @@ echo $page_gen->gen_begin();
 <div class="container">
     <div class="row">
         <div class="col-6-6">
-            <p class="roboto-font">
+            <p class="lato-font">
                 Tak jak wspomniałem, nazywam się Kuba Gogola. Jeżeli chcesz mnie o coś spytać, to serdecznie zapraszam do skontaktowania się ze mną.
             </p>
         </div>
@@ -33,7 +33,7 @@ echo $page_gen->gen_begin();
 <div class="container">
     <div class="row">
         <div class="col-6-6">
-            <p class="roboto-font">
+            <p class="lato-font">
                 Zazwyczaj odpisuję na e-maile w dniu ich otrzymania. Oczywistym jest jednak, że czynię to jedynie w dni robocze. Weekendy mam wolne,
                 więc jeżeli coś ode mnie chcesz to odpowiedzi możesz się spodziewać pomiędzy poniedziałkiem a piątkiem. Najczęściej w środku nocy,
                 bo jak przystało na rasowego studenta informatyki, rzadko zdarza mi się położyć do łóżka o ludzkiej porze. Zamiast tego wolę programować
@@ -64,6 +64,17 @@ echo $page_gen->gen_begin();
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6-6">
+            <p class="lato-font">
+                Jeżeli masz do mnie jakieś pytania to zachęcam do skorzystania z mojego <a href="qa.php">Q&A</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
 <?php
 echo $page_gen->gen_end();
 ?>
