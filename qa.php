@@ -39,14 +39,17 @@ echo $page_gen->gen_begin();
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-6-6">
+        <div class="col-6-6 ">
             <p class="lato-font">
                 Zachęcam do zadawania mi pytań. W miarę możliwości postaram się na nie odpowiedzieć. Zazwyczaj
-                odpowiadam w ciągu 2-3 dni.
+                odpowiadam w ciągu 2-3 dni. Możesz to zrobić klikając na poniższy przycisk.
             </p>
-            <h3 class="roboto-font">
+            <h3 class="roboto-font button-style">
                 <a href="question_form.php">Zadaj mi pytanie!</a>
             </h3>
+            <p class="lato-font">
+                Dotychczas zadane pytania znajdziesz poniżej.
+            </p>
         </div>
     </div>
 </div>

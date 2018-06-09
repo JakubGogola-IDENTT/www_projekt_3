@@ -14,7 +14,7 @@ $INSERT_ANSWER =<<<EOT
 INSERT INTO answers (question_ID, answer) VALUES (?, ?);
 EOT;
 
-$SELECT_QUESTIONS = "SELECT * FROM questions ORDER BY post_date LIMIT 20";
+$SELECT_QUESTIONS = "SELECT * FROM questions ORDER BY post_date LIMIT 10";
 $SELECT_ANSWER = "SELECT answer FROM answers WHERE question_ID = ?;";
 
 $sessionKEY = "key";

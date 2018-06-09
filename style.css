@@ -69,6 +69,24 @@ a:hover {
     color: #7798AB;
 }
 
+.button-style a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    font-weight: lighter;
+    background-color: #221E22;
+    min-width: 8em;
+    height: 2.5em;
+    padding: 0.8em 2em 0.8em 2em;
+    border: none;
+}
+
+.button-style a:hover {
+    color: #C2DFE3;
+}
+
 /* Fonts */
 
 .code-font {
@@ -398,6 +416,24 @@ textarea {
 .answer p {
     margin: 0.2em;
     font-size: 1.2em;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    font-weight: lighter;
+    background-color: #221E22;
+    min-width: 8em;
+    height: 2.5em;
+    padding: 0.8em 2em 0.8em 2em;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    color: #C2DFE3;
 }
 
 
