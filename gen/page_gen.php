@@ -19,12 +19,28 @@ $HEAD =<<<EOT
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{STYLES}}
 {{FONTS}}
+{{SCRIPTS}}
 </head>\n
 EOT;
 
 $HEADER =<<<EOT
 <header class="roboto-font background-color-1">{{TITLE}}</header>\n
 EOT;
+
+$MATHJAX_SCRIPT =<<<EOT
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}, 
+      CommonHTML: { linebreaks: { automatic: true } }, 
+      "HTML-CSS": { linebreaks: { automatic: true } }, 
+      SVG: { linebreaks: { automatic: true } } 
+    })
+</script>
+<script async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+EOT;
+
 
 $FOOTER =<<<EOT
 <footer class="background-color-3 text-on-background lato-font">
@@ -100,6 +116,9 @@ class page_gen {
         }
         $begin_str = str_replace("{{FONTS}}", $fonts_str, $begin_str);
 
+        $scripts_str = $this->add_mathjax_script();
+        $begin_str = str_replace("{{SCRIPTS}}", $scripts_str, $begin_str);
+
         $begin_str .= "<body>\n";
 
         $begin_str .= $this->put_header();
@@ -158,8 +177,14 @@ class page_gen {
         return "<link href=\"". $font_name ."\" rel=\"stylesheet\">\n";
     }
 
+    private function add_mathjax_script () {
+        global $MATHJAX_SCRIPT;
+
+        return $MATHJAX_SCRIPT;
+    }
+
     private function add_script () {
-        
+        return "";
     }
 
     private function add_attributes ($attributes) {

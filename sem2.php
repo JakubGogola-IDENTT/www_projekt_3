@@ -10,6 +10,7 @@ require_once(__DIR__ . "/gen/page_gen.php");
 require_once(__DIR__."/gen/menu_item.php");
 require_once(__DIR__."/gen/return_item.php");
 require_once (__DIR__."/gen/subject_div_gen.php");
+require_once  (__DIR__."/gen/mathjax_item.php");
 
 $title = "Semestr II";
 $content = "Strona o mnie i moich zainteresowanich";
@@ -27,6 +28,7 @@ $return_items[] = new return_item("Edukacja", "education.php");
 
 $page_gen = new page_gen($title, $content, $author, $styles, $fonts, $scripts, $menu_items, $return_items);
 $subject_div_gen = new subject_div_gen();
+$mathjax_gen = new mathjax_item();
 
 echo $page_gen->gen_begin();
 ?>
@@ -46,15 +48,23 @@ echo $subject_div_gen->put_subject_div("Analiza matematyczna II", "prof. dr hab.
     "Kontynuacja kursu \"Analiza matematyczna I\". Poszerzyliśmy zasoby swojej wiedzy o funkcje wielu zmiennych.",
     "Trudno powiedzieć, zważywszy na to, że analiza raczej nie należy do moich ulubionych zagadnień.
              Osobiście wystarczy mi już chyba wrażeń związanych z tym przedmiotem.");
+echo $mathjax_gen->put_mathjax_div("Najważniejszym wzorem tego wykładu był ten dotyczący zamiany zmiennych w całce: ",
+    "\\int_{\\Phi(U)} f(\\vec x) d\\vec{x} = \\int_U (f\\circ \\Phi)(\\vec{u}) |\\det(\Phi'(\\vec{u}))| d\\vec{u}");
+
 echo $subject_div_gen->put_subject_div("Algebra abstrakcyjna i kodowanie", "prof. dr hab. Jacek Cichoń",
     "Poniekąd rozszerzenie informacji z algebry z I semestru. Wprowadzenie do algorytmów szyfrującyh i teorii kodowania.",
     "Warto poczytać trochę o kryptografii, bo to bardzo ważny w dzisiejszych czasach temat, a ten kurs daje dobre podstawy
              do kontynuowania nauki w tej dziedzinie informatyki.");
+echo $mathjax_gen->put_mathjax_div("Jednym z istotniejszych wzorów był ten dotyczący funkcji Eulera: ",
+    "\\sum_{d|n} \\phi(d) = n~.");
+
 echo $subject_div_gen->put_subject_div("Matematyka dyskretna", "dr hab. Szymon Żeberski",
     "Świetny kurs! Podstawy zlicznia, trochę teorii grafów, niesamowicie przydatne funkcje tworzące i trochę klas kombinatorycznych.",
     "Wiedzę z matematyki dyskretnej wykorzystuję na bieżąco, podczas wielu kursów. Trudno jednoznacznie określić czego warto się douczyć.
                 Myślę, że warto po prostu na bieżąco uzupełniać swoje informacje, a także od czasu do czasu powtórzyć to, czego się wtedy nauczyliśmy.");
-echo $subject_div_gen->put_subject_div("Kurs programowani", "dr inż. Wojciech Macyna",
+//TODO: Dodać najważniejszy wzór [MD].
+
+echo $subject_div_gen->put_subject_div("Kurs programowania", "dr inż. Wojciech Macyna",
     "Wprowadzenie w podstawy programowania w językach Java i C++.",
     "Warto nauczyć się wzorców projektowych.");
 ?>
