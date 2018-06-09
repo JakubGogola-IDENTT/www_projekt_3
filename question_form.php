@@ -7,6 +7,7 @@
  */
 require_once (__DIR__."/db/db_connector.php");
 require_once(__DIR__ ."/gen/page_gen.php");
+require_once (__DIR__."/gen/captcha_gen.php");
 
 session_start();
 $_SESSION[$sessionKEY] = $sessionVAL;
@@ -56,15 +57,29 @@ echo $page_gen->gen_begin();
                    <textarea class="lato-font" name="QUESTION" rows="10" cols="100" placeholder="Tutaj wpisz swoje pytanie" required></textarea>
                </div>
 
-               <div  class="form-row">
-                   <input type="submit" value="Submit">
+               <div class="form-row">
+                   <p class="lato-font">
+                       Udowodnij, że nie jesteś robotem licząc wyznacznik macierzy 3x3!
+                   </p>
                </div>
 
+               <?php
+               $captcha_gen = new captcha_gen();
+               $_SESSION['captcha_result'] = $captcha_gen->generate();
+               ?>
+
+               <div class="form-row">
+                   <label class="form-label roboto-font">Twój wynik to: </label>
+                   <input class="lato-font" type="text" name="RESULT" maxlength="20" placeholder="Wynik" required>
+               </div>
+
+               <div  class="form-row">
+                   <input type="submit" value="Wyślij">
+               </div>
            </form>
         </div>
     </div>
 </div>
-
 
 <?php
 echo $page_gen->gen_end();
