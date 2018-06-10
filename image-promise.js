@@ -19,5 +19,5 @@ Promise.all([
 ]).then(function() {
     console.log("All images were loaded.");
 }).catch(function() {
-    console.log("Loading error!");
+    console.log("Loading error! Refresh website!");
 });
