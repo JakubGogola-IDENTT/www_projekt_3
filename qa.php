@@ -22,7 +22,7 @@ session_start();
 $title = "Q&A";
 $content = "Strona o mnie i moich zainteresowanich";
 $author = "Jakub Gogola";
-$styles = ["style.css", "grid.css", "reset.css"];
+$styles = ["css/style.css"];
 $fonts = ["https://fonts.googleapis.com/css?family=Roboto", "https://fonts.googleapis.com/css?family=Lato"];
 $scripts = [];
 

@@ -1,0 +1,36 @@
+@import "definitions";
+
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*='col-'] {
+  float: left;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: $breakpoint) {
+  .row + .row {
+    margin-top: 0.5em;
+  }
+
+  .row:first-of-type {
+    margin-top: 0;
+  }
+
+  [class*='col-']:last-of-type {
+    margin-right: 0;
+  }
+
+  @for $k from 1 through $columns-num {
+    $d: (1 / $columns-num) * (100 - ($columns-num - 1) * $break);
+
+    .col-#{$k}-#{$columns-num} {
+      width: ($k * $d + ($k - 1) * $break) * 1%;
+    }
+  }
+}

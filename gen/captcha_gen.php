@@ -8,9 +8,11 @@
 
 $DET =<<<EOT
 <div class="form-row">
+    <h3>
     $$
         {{EXPR}}
     $$
+    </h3>
 </div>
 EOT;
 

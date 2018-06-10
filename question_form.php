@@ -15,7 +15,7 @@ $_SESSION[$sessionKEY] = $sessionVAL;
 $title = "Zadaj pytanie";
 $content = "Strona o mnie i moich zainteresowanich";
 $author = "Jakub Gogola";
-$styles = ["style.css", "grid.css", "reset.css"];
+$styles = ["css/style.css"];
 $fonts = ["https://fonts.googleapis.com/css?family=Roboto", "https://fonts.googleapis.com/css?family=Lato"];
 $scripts = [];
 $menu_items = [];
@@ -39,12 +39,19 @@ echo $page_gen->gen_begin();
 
            <form method="post" action="db/question.php">
                <div class="form-row">
-                   <label class="form-label roboto-font">Pseudonim</label>
+                   <div class="col-1-6">
+                       <label class="form-label roboto-font">Pseudonim</label>
+                   </div>
+
+
                    <input class="lato-font" type="text" name="NICK" maxlength="20" placeholder="Podaj pseudonim" required>
                </div>
 
                 <div class="form-row">
-                    <label class="form-label roboto-font">Temat</label>
+                    <div class="col-1-6">
+                        <label class="form-label roboto-font">Temat</label>
+                    </div>
+
                     <select class="lato-font" name="SUBJECT">
                         <option value="M">Matematyka</option>
                         <option value="P">Programowanie</option>
@@ -70,7 +77,9 @@ echo $page_gen->gen_begin();
                ?>
 
                <div class="form-row">
-                   <label class="form-label roboto-font">Twój wynik to: </label>
+                   <div class="col-1-6">
+                       <label class="form-label roboto-font">Twój wynik to: </label>
+                   </div>
                    <input class="lato-font" type="text" name="RESULT" maxlength="20" placeholder="Wynik" required>
                </div>
 

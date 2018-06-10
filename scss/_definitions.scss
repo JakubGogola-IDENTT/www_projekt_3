@@ -1,0 +1,60 @@
+//Grid variables;
+$columns-num: 6;
+$break: 1;
+$breakpoint: 640px;
+$col-margin: 1%;
+
+
+//Fonts
+$style: sans-serif;
+$lato-font: 'Lato', $style;
+$roboto-font: 'Roboto', $style;
+$code-font: 'Courier New', $style;
+
+//Background
+$text-on-background: white;
+
+//Overflow
+$overflow-type: hidden;
+
+//Tags
+
+//Colors
+$color-1: #9DB4C0;
+$color-2: #7798AB;
+$color-3: #221E22;
+$hover-color: #C2DFE3;
+
+//Link style
+%link-style-shared {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  overflow: $overflow-type;
+  font-weight: lighter;
+  background-color: #221E22;
+  min-width: 8em;
+  padding: 0.8em 2em 0.8em 2em;
+}
+
+@mixin link-style {
+  @extend %link-style-shared;
+  height: 2.5em;
+  border: none;
+}
+
+@mixin menu-link-style {
+  @extend %link-style-shared;
+  margin: 1em 1em;
+}
+
+@mixin return-style {
+  display: inline;
+  text-align: center;
+  text-decoration: none;
+  color: #221E22;
+  font-weight: lighter;
+  width: 12%;
+  margin-bottom: 1em;
+}
