@@ -63,7 +63,8 @@ echo $page_gen->gen_begin();
  echo $subject_div_gen->put_subject_div("Logika i struktury formaln", "dr hab. Szymon Żeberski",
      "Doktor Żeberski wprowadził nas w świat logiki matematycznej, teorii mnogości oraz poopowiadł trochę czym jest teoria modeli.",
      "Dosyć ciekawą dziedziną matematyki wydały mi się struktury formalne, czyli wspomniana teoria modeli. Warto by o tym trochę poczytać.");
- //TODO: Dodać najważniejszy wzór wykładu [AM1]
+echo  $mathjax_gen->put_mathjax_div("Jednym z ważniejszych wzorów poznanych na wykładzie była definicja funkcji: ",
+    "(\\forall x)(\\forall y_1)(\\forall y_2) \\\\ (((x,y_1) \in f \\land (x, y_2) \in f) \implies y_1 = y_2)");
 
  echo $subject_div_gen->put_subject_div("Wstęp do informatyki i programowania", "dr Przemysław Kobylański",
      "Dla mnie był to kurs, na którym mogłem powtórzyć swoją wiedzę na temat języka C i algorytmów nabytą w szkole średniej. A poza tym,

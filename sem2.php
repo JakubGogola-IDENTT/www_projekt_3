@@ -62,7 +62,8 @@ echo $subject_div_gen->put_subject_div("Matematyka dyskretna", "dr hab. Szymon �
     "Świetny kurs! Podstawy zlicznia, trochę teorii grafów, niesamowicie przydatne funkcje tworzące i trochę klas kombinatorycznych.",
     "Wiedzę z matematyki dyskretnej wykorzystuję na bieżąco, podczas wielu kursów. Trudno jednoznacznie określić czego warto się douczyć.
                 Myślę, że warto po prostu na bieżąco uzupełniać swoje informacje, a także od czasu do czasu powtórzyć to, czego się wtedy nauczyliśmy.");
-//TODO: Dodać najważniejszy wzór [MD].
+echo $mathjax_gen->put_mathjax_div("Dosyć przydatnym wzorem z tego kursu był wzór włączeń i wyłączeń: ",
+    "\\mid  A_1 \cup A_2 \cup \dots \cup A_n \\mid = \\\\ =\\sum_{k=1}^{n} \\sum_{[A \in \\{1,2,\\dots,n \\}]^k} (-1)^{k+1} \\mid \bigcap_{i \\in A} A_i \\mid");
 
 echo $subject_div_gen->put_subject_div("Kurs programowania", "dr inż. Wojciech Macyna",
     "Wprowadzenie w podstawy programowania w językach Java i C++.",
