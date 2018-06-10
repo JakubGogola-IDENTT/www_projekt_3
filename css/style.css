@@ -358,7 +358,7 @@ input[type="submit"]:hover {
   color: white;
   background-color: #7798AB;
   opacity: 0.9;
-  width: 90%;
+  width: 100%;
   padding: 0.2em;
   overflow: hidden; }
 
@@ -369,7 +369,7 @@ input[type="submit"]:hover {
   margin: 0.2em; }
 
 .answer {
-  width: 90%;
+  width: 100%;
   padding: 0.2em;
   overflow: hidden; }
 
