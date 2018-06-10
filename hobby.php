@@ -29,6 +29,7 @@ $book_div_gen = new book_div_gen();
 echo $page_gen->gen_begin();
 ?>
 
+
 <div class="container">
     <div class="row">
         <div class="col-2-6">
@@ -88,22 +89,20 @@ echo $page_gen->gen_begin();
 
 <div class="container">
     <div class="row">
-        <div class="col-3-6">
-            <img src="images/hobby/zima.JPG" alt="error" class="photo">
+        <div id="img1" class="col-3-6">
         </div>
-        <div class="col-3-6">
-            <img src="images/hobby/wodospad.jpg" alt="error" class="photo">
+        <div id="img2" class="col-3-6">
         </div>
     </div>
     <div class="row">
-        <div class="col-3-6">
-            <img src="images/hobby/uniwerek.JPG" alt="error" class="photo">
+        <div id="img3" class="col-3-6">
         </div>
-        <div class="col-3-6">
-            <img src="images/hobby/kwiatek.jpg" alt="error" class="photo">
+        <div id="img4" class="col-3-6">
         </div>
     </div>
 </div>
+
+<script src="image-promise.js"></script>
 
 <?php
 echo $page_gen->gen_end();
