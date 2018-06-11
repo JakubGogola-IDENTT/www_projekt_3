@@ -81,6 +81,6 @@ echo $page_gen->gen_begin();
     </div>
 </div>
 <?php
-echo $page_gen->put_script("local-storage.js");
+echo $page_gen->put_script("js/local-storage.js");
 echo $page_gen->gen_end();
 ?>
