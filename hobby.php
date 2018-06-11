@@ -102,8 +102,7 @@ echo $page_gen->gen_begin();
     </div>
 </div>
 
-<script src="image-promise.js"></script>
-
 <?php
+echo $page_gen->put_script("js/image-promise.js");
 echo $page_gen->gen_end();
 ?>

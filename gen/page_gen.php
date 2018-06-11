@@ -169,6 +169,10 @@ class page_gen {
         }
     }
 
+    public function put_script ($script) {
+        return "<script src=\"" . $script . "\"></script>";
+    }
+
     private function add_style ($style_name) {
         return "<link rel=\"stylesheet\" href=\"". $style_name ."\">\n";
     }

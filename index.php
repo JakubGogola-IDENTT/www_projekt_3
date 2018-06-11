@@ -28,7 +28,7 @@ echo $page_gen->gen_begin();
     <div class="container">
         <div class="row">
             <div class="col-2-6">
-                <img src="images/jg.jpg" alt="error" class="author-photo">
+                <img id="authorImg" src="images/jg.jpg" alt="error" class="author-photo">
             </div>
             <div class="col-4-6">
                 <p class="lato-font">
@@ -81,5 +81,6 @@ echo $page_gen->gen_begin();
     </div>
 </div>
 <?php
+echo $page_gen->put_script("local-storage.js");
 echo $page_gen->gen_end();
 ?>
