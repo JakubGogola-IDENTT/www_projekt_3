@@ -38,7 +38,7 @@ echo $page_gen->gen_begin();
         <div class="col-4-6">
             <p class="lato-font">
                 Posiadam wiele zainteresowań, ale moje dwie ulubione rzeczy to czytanie książek fantasy i fotografia. Poniżej znajdziesz
-                kilka moich ulubionych książek (lub ich serii) i parę moich zdjęć. Oprócz tego, co możesz tutaj obejrzeć i przeczytać,
+                kilka moich ulubionych książek lub ich serii i parę moich zdjęć. Oprócz tego, co możesz tutaj obejrzeć i przeczytać,
                 lubię jeździć na rowerze, pływać i chodzić po górach. Szczególnie podczas wykonywania tej ostatniej czynności, zdarza mi się
                 uchwycić wiele niesamowitych kadrów. Niestety, ostatnio mam co raz mniej czasu na oddawanie się moim pasjom, ale staram się
                 poświęcać im każdą dostępną chwilę wolnego czasu.
@@ -52,27 +52,27 @@ echo $page_gen->gen_begin();
         <!-- J. Grzędowicz (powieści) -->
         <?php
             $author = "Jarosław Grzędowicz";
-            echo $book_div_gen->put_book_div("Pan Lodowego Ogrodu", $author, "seria");
-            echo $book_div_gen->put_book_div("Popiół i kurz", $author, "powieść");
-            echo $book_div_gen->put_book_div("Hel 3", $author, "powieść");
+            echo $book_div_gen->put_book_div("Pan Lodowego Ogrodu", "seria", $author);
+            echo $book_div_gen->put_book_div("Popiół i kurz","powieść", $author);
+            echo $book_div_gen->put_book_div("Hel 3", "powieść", $author);
         ?>
     </div>
     <!-- J. Grzędowicz (zbiory opowiadań) -->
     <div class="row">
         <?php
             $type = "zbiór opowiadań";
-            echo $book_div_gen->put_book_div("Księga Jesiennych Demonów", $author, $type);
-            echo $book_div_gen->put_book_div("Wypychacz zwierząt", $author, $type);
-            echo $book_div_gen->put_book_div("Azyl", $author, $type);
+            echo $book_div_gen->put_book_div("Księga Jesiennych Demonów", $type, $author);
+            echo $book_div_gen->put_book_div("Wypychacz zwierząt", $type, $author);
+            echo $book_div_gen->put_book_div("Azyl", $type, $author);
         ?>
     </div>
 
     <!-- Inne -->
     <div class="row">
         <?php
-            echo $book_div_gen->put_book_div("Kroniki Czarnej Kompani", "Glen Cook", "seria");
-            echo $book_div_gen->put_book_div("Gra o tron", "George R. R. Martin", "seria");
-            echo $book_div_gen->put_book_div("Wykłady ze Wstępu do Matematyki", "J. Cichoń", "skrypt");
+            echo $book_div_gen->put_book_div("Kroniki Czarnej Kompani", "seria", "Glen Cook");
+            echo $book_div_gen->put_book_div("Gra o tron", "seria", "George R. R. Martin");
+            echo $book_div_gen->put_book_div("Wykłady ze Wstępu do Matematyki",  "skrypt", "J. Cichoń");
         ?>
     </div>
 </div>

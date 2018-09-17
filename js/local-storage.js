@@ -55,4 +55,3 @@ ImageLoader.prototype.clearLocalStorage = function () {
 
 let authorImg = new ImageLoader("authorImg", "authorPhoto", "images/jg.jpg");
 authorImg.loadImage();
-authorImg.clearLocalStorage();
